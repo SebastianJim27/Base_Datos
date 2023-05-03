@@ -43,7 +43,7 @@ public class adicionInv extends HttpServlet {
         String dato = "";
         String todDatos = "";
             
-        if (producto != null && !producto.isEmpty() && nombre != null && !nombre.isEmpty() && cantidad != null && !cantidad.isEmpty() && vencimiento != null && !vencimiento.isEmpty() && codigo != null && !codigo.isEmpty()){
+
             if (delet != null){
                 try {
                     
@@ -136,7 +136,7 @@ public class adicionInv extends HttpServlet {
             request.getSession().setAttribute("infor", infor);
             RequestDispatcher rd = request.getRequestDispatcher("datos.jsp");
             rd.forward(request, response);
-        }else{
+        
             
             try {
                     
@@ -162,7 +162,7 @@ public class adicionInv extends HttpServlet {
             } catch (SQLException ex) {
                 infor = "mensaje 8 " + ex.getMessage();
             }
-        }
+        
     }
 
     @Override
